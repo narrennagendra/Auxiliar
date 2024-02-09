@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 
 const PromptSchema = new mongoose.Schema({
-    Lesson: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Lesson",
-    },
 	topicName: {
 		type: String,
 		required: [true, "Topic name of prompt name is required"],
