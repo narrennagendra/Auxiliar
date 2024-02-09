@@ -5,6 +5,7 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const promptRouter = require('./routes/promptRoutes');
 const subjectRouter = require('./routes/SubjectRoutes');
+const chatRouter = require('./routes/chatRoutes');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(express.json());
 
 app.use('/prompt', promptRouter);
 app.use('/subject', subjectRouter);
+app.use('/chat', chatRouter);
 
 app.all("*", (req, res, next) => {
 	next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
