@@ -32,7 +32,7 @@ const safetySettings = [
 	},
 ];
 
-exports.chat = catchAsync(async (req, res, next) => {
+exports.generateContent = catchAsync(async (req, res, next) => {
 	const history = req.body.history;
 	const llm_response = await fetch(LLM_url, {
 		method: "POST",
