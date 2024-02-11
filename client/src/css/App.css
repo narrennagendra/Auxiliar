@@ -1,0 +1,283 @@
+.container {
+	max-width: 130rem;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 3.2rem;
+	/* margin-top: 3.2rem; */
+	margin-bottom: 4.8rem;
+	align-items: flex-end;
+	padding-bottom: 1.6rem;
+	border-bottom: 0.2rem solid #4d6b7c;
+}
+
+.logo {
+	font-size: 3rem;
+	font-weight: 700;
+	text-decoration: none;
+	color: #fff;
+}
+
+.navbar {
+  margin-top: 2%;
+	display: flex;
+	gap: 3.2rem;
+	align-items: center;
+}
+
+.search-form {
+	display: flex;
+	align-items: center;
+}
+
+.search-input {
+	font-family: 'Roboto Mono', monospace;
+	color: #002236;
+	height: 4.3rem;
+	width: 30rem;
+	border-radius: 100px;
+	padding: 1.2rem;
+}
+
+.search-input:focus {
+	outline: none;
+}
+
+.search-input::placeholder {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1.6rem;
+	color: #002236;
+}
+
+.search-btn {
+	margin-left: -3.5rem;
+	background-color: #fff;
+	border: none;
+	border-radius: 100px;
+	height: 2rem;
+	width: 2rem;
+}
+
+.icon {
+	color: #002236;
+	height: 2rem;
+	width: 2rem;
+}
+
+.btn {
+	padding: 1rem 3.2rem;
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: #002236;
+	background-color: #5de8c1;
+	border-radius: 100px;
+	transition: all 0.3s;
+}
+
+.btn:hover {
+	cursor: pointer;
+	background-color: #fff;
+}
+
+/* ************************** */
+/* main section */
+/* ************************** */
+.not-main {
+	max-width: 140rem;
+	margin: 0 auto;
+	display: grid;
+}
+.main {
+	max-width: 140rem;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 40fr 60fr;
+}
+
+.section {
+	padding: 3.2rem;
+	border: 2px solid #99aab4;
+	border-radius: 2rem;
+}
+
+.topic-title {
+	font-size: 1.4rem;
+	font-weight: 500;
+	grid-column: 1 / -1;
+	margin-bottom: 3.2rem;
+}
+
+.topic-title span {
+	color: #5de8c1;
+	margin-right: 0.8rem;
+}
+
+
+/* ************************** */
+/* prerequisites section */
+/* ************************** */
+
+.prerequisites {
+	grid-column: 1 / -1;
+	margin-bottom: 8rem;
+	padding: 3.2rem;
+}
+
+.section-title {
+	font-size: 2.4rem;
+	font-weight: 500;
+	margin-bottom: 2.4rem;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	gap: 1.6rem;
+}
+
+.list-item {
+	font-size: 1.8rem;
+}
+
+.list-item a:link,
+.list-item a:visited {
+	color: #f76707;
+	margin-left: 4.8rem;
+	transition: all 0.3s;
+}
+
+.list-item a:hover,
+.list-item a:active {
+	text-decoration: none;
+
+}
+
+/* ************************** */
+/* images section */
+/* ************************** */
+
+.section-images {
+	margin-right: 24px;
+	width: 100%;
+	height: 100%;
+}
+
+
+.list-item img {
+	width: 100%;
+	border-radius: 2rem;
+}
+
+/* ************************** */
+/* chat section */
+/* ************************** */
+
+.section-chat{
+	margin-left: 24px;
+}
+
+.chat {
+	padding: initial;
+	margin: initial;
+	box-sizing: content-box;
+	font-size: 1.8rem;
+	padding: 1.6rem;
+	line-height: 1.6;
+	margin-bottom: 1.6rem;
+}
+
+.gemini-response {
+	background-color: #1a4057;
+	border-radius: 1rem;
+	padding: 4.8rem 1rem 3.2rem 6.4rem;
+}
+
+.gemini-response ul,
+.gemini-response ol,
+.gemini-response p {
+	margin-bottom: 1.2rem;
+}
+
+.gemini-response li {
+	margin-left: 0.8rem;
+}
+
+.user-chat {
+	background-color: #001e30;
+	border-radius: 1rem;
+}
+
+.user-input {
+	margin-top: 5rem;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	height: 6rem;
+	gap: 2rem;
+}
+
+.send-btn {
+	background-color: #002b44;
+	border: none;
+	border-radius: 50%;
+}
+
+.send-icon {
+	width: 6rem;
+	height: 6rem;
+	color: #5de8c1;
+	background-color: #002b44;
+	border-radius: 50%
+}
+
+.send-icon:hover {
+	cursor: pointer;
+	color: #fff;
+}
+
+.chat-input {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1.8rem;
+	padding: 1.2rem;
+	border: none;
+	border-radius: 1rem;
+}
+
+
+/* ************************** */
+/* additiona-resources section */
+/* ************************** */
+
+.additional-resources {
+	grid-column: 1 / -1;
+	margin: 8rem 0;
+	padding: 3.2rem;
+}
+
+.footer {
+	border: 0.5rem solid #66808f;
+}
+
+/* ************************** */
+/* scrollbar */
+/* ************************** */
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+} 

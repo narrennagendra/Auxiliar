@@ -1,0 +1,250 @@
+/* ************************** */
+/* scrollbar */
+/* ************************** */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ************************** */
+/* general styles */
+/* ************************** */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1;
+    font-weight: 400;
+    color: #fff;
+    background-color: #002b44;
+}
+
+/* ************************** */
+/* header styles */
+/* ************************** */
+
+.container {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3.2rem;
+    margin-top: 3.2rem;
+    margin-bottom: 4.8rem;
+    align-items: flex-end;
+    padding-bottom: 1.6rem;
+    border-bottom: 0.2rem solid #4d6b7c;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    gap: 3.2rem;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    font-family: 'Roboto Mono', monospace;
+    color: #002236;
+    height: 4.3rem;
+    width: 30rem;
+    border-radius: 100px;
+    padding: 1.2rem;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-input::placeholder {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.6rem;
+    color: #002236;
+}
+
+.search-btn {
+    margin-left: -3.5rem;
+    background-color: #fff;
+    border: none;
+    border-radius: 100px;
+    height: 2rem;
+    width: 2rem;
+}
+
+.icon {
+    color: #002236;
+    height: 2rem;
+    width: 2rem;
+}
+
+.btn {
+    padding: 1rem 3.2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #002236;
+    background-color: #5de8c1;
+    border-radius: 100px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/* ************************** */
+/* main styles */
+/* ************************** */
+
+.section-title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 2.4rem;
+}
+
+/* ************************** */
+/* form styles */
+/* ************************** */
+
+.prompt-form {
+    border: 2px solid #99aab4;
+    padding: 4.8rem;
+    border-radius: 50px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+}
+.form-section {
+    padding-bottom: 2.4rem;
+    border-bottom: 2px solid #4d6b7c;
+}
+
+.sub-heading{
+    font-size:x-large;
+}
+
+.subject-input,
+.sub-section {
+    padding: 2rem;
+    display:flex;
+    /* display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.6rem; */
+    align-items: normal;
+}
+.subject-info{
+    /* display: flex;
+    flex-direction: row; */
+    padding: 2rem;
+}
+.label{
+    font-size:x-large;
+    padding: 6px;
+}
+.subject-input,
+.sub-section  {
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    background-color: transparent;
+    padding: 5px;
+    border: 1px solid;
+    font-size: large;
+    color:#fff;
+    width: 50%;
+    outline: none;
+}
+
+/* ************************** */
+/* generate box styles */
+/* ************************** */
+
+/* ************************** */
+/* generate box styles */
+/* ************************** */
+
+.generate-box {
+    margin-top: 4.8rem;
+    padding: 2.4rem;
+    border: 2px solid #99aab4;
+    border-radius: 2rem;
+    width: 50%;
+    float: left;
+    /* Float the generate box to the left */
+}
+
+.instruction-box {
+    background-color: #34495e;
+    height: 12rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.generate-btn {
+    padding: 1rem 2.4rem;
+    font-size: 1.6rem;
+    border-radius: 20px;
+}
+
+.result-box {
+    margin-top: 4.8rem;
+    padding: 3rem;
+    border: 2px solid #99aab4;
+    border-radius: 2rem;
+    width: 48%;
+    float: right;
+    margin-bottom: 4.8rem;
+
+    /* Float the result box to the right */
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1rem;
+    margin-bottom: 17rem;
+}
+
+.result-item {
+    background-color: #34495e;
+    height: 100rem;
+    border-radius: 1rem;
+}
