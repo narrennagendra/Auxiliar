@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import './search.css'; // Import the CSS file
+import { useState } from 'react';
+import '../../css/search.css'; 
+import Header from '../partials/Header';
+import Footer from '../partials/Footer';
 
 const SearchBox = () => {
     // Sample data for search suggestions
@@ -32,20 +34,24 @@ const SearchBox = () => {
     };
 
     return (
-        <div className="footer">
-            <div className="search-box">
-                <input type="text" placeholder="Search..." value={userInput} onChange={handleSearchSuggestions} />
-                <button onClick={() => console.log('Search clicked')}>Search</button>
-                {/* Suggestions will be displayed below the input box */}
-                <ul className="suggestion-list">
-                    {filteredSuggestions.map((suggestion, index) => (
-                        <li key={index} className="suggestion-item" onClick={() => handleSuggestionClick(suggestion)}>
-                            {suggestion}
-                        </li>
-                    ))}
-                </ul>
+        <>
+            <Header />
+            <div className="footer">
+                <div className="search-box">
+                    <input type="text" placeholder="Search..." value={userInput} onChange={handleSearchSuggestions} />
+                    <button onClick={() => console.log('Search clicked')}>Search</button>
+                    {/* Suggestions will be displayed below the input box */}
+                    <ul className="suggestion-list">
+                        {filteredSuggestions.map((suggestion, index) => (
+                            <li key={index} className="suggestion-item" onClick={() => handleSuggestionClick(suggestion)}>
+                                {suggestion}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
-        </div>
+            <Footer />
+        </>
     );
 };
 
