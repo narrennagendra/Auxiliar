@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './search.css'; // Import the CSS file
+import loginImage from './login.jpg'; // Import the image file
 
 const SearchBox = () => {
     // Sample data for search suggestions
@@ -45,6 +46,7 @@ const SearchBox = () => {
                     ))}
                 </ul>
             </div>
+            <img src={loginImage} alt="Login" />
         </div>
     );
 };
