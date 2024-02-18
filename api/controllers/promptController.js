@@ -1,3 +1,5 @@
+const mongoose = require("mongoose");
+
 const Prompt = require("../models/PromptModel");
 const Subject = require("../models/SubjectModel");
 
@@ -37,15 +39,14 @@ exports.createPrompt = catchAsync(async (req, res, next) => {
 		})
 	).save();
 
-	let subject = Subject.findOne({ name: subjectName });
+	let subject = await Subject.findOne({ name: subjectName });
 	if (!subject) {
-		subject = await await Subject.create({
+		subject = await Subject.create({
 			name: subjectName,
-			units: Array(5).fill([]),
+			units: [[], [], [], [], []],
 		});
 	}
-
-	subject.units[+unit].push([promptId, topicName]);
+	subject.units[+unit-1].push([promptId.toString(), topicName]);
 	await subject.save();
 
 	res.status(201).json({
