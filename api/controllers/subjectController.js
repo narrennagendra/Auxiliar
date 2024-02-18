@@ -15,7 +15,7 @@ exports.getSubjectTopics = catchAsync(async (req, res, next) => {
 
 exports.getSubjectsByName = catchAsync(async (req, res, next) => {
 	const searchQuery = req.query.s;
-	const result = Subject.find({
+	const result = await Subject.find({
 		name: { $regex: searchQuery, $options: "i" },
 	}).limit(10);
 	res.status(200).json({
