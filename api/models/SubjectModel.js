@@ -6,7 +6,7 @@ const SubjectSchema = new mongoose.Schema({
 		required: [true, "Subject name is required"],
 		unique: true,
 	},
-	units: [[{ type: mongoose.Schema.Types.ObjectId, ref: "Prompt" }, String]],
+	units: [[[String, String]]],
 });
 
 const Subject = mongoose.model("Subject", SubjectSchema);

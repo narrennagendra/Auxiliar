@@ -13,8 +13,9 @@ const PromptSchema = new mongoose.Schema({
 		type: String,
 		required: [true, "Response from LLM is required"],
 	},
-	imagesUrl: [[String, String]],
+	imagesUrl: [String],
 	prerequisites: [[String, String]],
+	additionalResources: [[String, String]],
 });
 
 const Prompt = mongoose.model("Prompt", PromptSchema);
