@@ -10,8 +10,8 @@ export default function Header() {
         <nav className="navbar">
           <form action="#" className="search-form">
             <input type="text" placeholder="Search" className="search-input" />
-            <Link to={"/search"}>
-              <button className="search-btn"><FaSearch /></button>
+            <Link to={"/"}>
+              <button className="search-btn"><FaSearch color='black' /></button>
             </Link>
           </form>
           <button className="btn">Logout</button>
