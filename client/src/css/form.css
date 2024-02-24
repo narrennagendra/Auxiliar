@@ -127,9 +127,10 @@ body {
     cursor: pointer;
     background-color: #fff;
 }
-.btn-section{
+
+.btn-section {
     display: grid;
-    grid-template-columns: repeat(6,2fr);
+    grid-template-columns: repeat(6, 2fr);
     gap: 3rem;
 }
 
@@ -155,45 +156,49 @@ body {
     grid-template-columns: repeat(1, 1fr);
     gap: 3rem;
 }
+
 .form-section {
     padding-bottom: 2.4rem;
     border-bottom: 2px solid #4d6b7c;
 }
 
-.sub-heading{
-    font-size:x-large;
+.sub-heading {
+    font-size: x-large;
 }
 
 .subject-input,
 .sub-section {
     padding: 2rem;
-    display:flex;
+    display: flex;
     /* display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1.6rem; */
     align-items: normal;
 }
-.subject-info{
+
+.subject-info {
     /* display: flex;
     flex-direction: row; */
     padding: 2rem;
 }
-.label{
-    font-size:x-large;
+
+.label {
+    font-size: x-large;
     padding: 6px;
 }
+
 .subject-input,
-.sub-section  {
+.sub-section {
     display: flex;
     flex-direction: column;
 }
 
-.input{
+.input {
     background-color: transparent;
     padding: 5px;
     border: 1px solid;
     font-size: large;
-    color:#fff;
+    color: #fff;
     width: 50%;
     outline: none;
 }

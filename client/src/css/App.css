@@ -22,7 +22,7 @@
 }
 
 .navbar {
-  margin-top: 2%;
+	margin-top: 2%;
 	display: flex;
 	gap: 3.2rem;
 	align-items: center;
@@ -90,6 +90,7 @@
 	margin: 0 auto;
 	display: grid;
 }
+
 .main {
 	max-width: 140rem;
 	margin: 0 auto;
@@ -176,7 +177,7 @@
 /* chat section */
 /* ************************** */
 
-.section-chat{
+.section-chat {
 	margin-left: 24px;
 }
 
@@ -280,4 +281,4 @@
 
 ::-webkit-scrollbar-thumb:hover {
 	background: #555;
-} 
+}
