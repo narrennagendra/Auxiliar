@@ -6,15 +6,15 @@ import ResultBox from "./ResultBox";
 import "../../css/form.css";
 
 export default function Container() {
-  return (
-    <div>
-        <Header />
-        <div className="container">
-            <MainForm/>
-            <GenerateBox />
-            <ResultBox />
-        </div>
-        <Footer />
-    </div>
-  )
+	return (
+		<div>
+			<Header />
+			<div className="container">
+				<MainForm />
+				<GenerateBox />
+				<ResultBox />
+			</div>
+			<Footer />
+		</div>
+	);
 }

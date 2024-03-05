@@ -6,6 +6,7 @@ import * as yup from "yup";
 import './../../css/form.css'
 
 function MainForm() {
+<<<<<<< HEAD
 	const form = useForm();
 	const { register, control, handleSubmit, formState } = form;
 	const { errors, touchedFields, dirtyFields, isDirty, isValid, isSubmitting, isSubmitted, isSubmitSuccessful } = formState;
@@ -16,6 +17,8 @@ function MainForm() {
 	const onError = (errors) => {
 		console.log("Errors: ", errors);
 	};
+=======
+>>>>>>> dc501168953e6064989a27bcd7a11ce39a95c268
 	const [prerequisiteCount, setPrerequisiteCount] = useState(1);
 	const [imageCount, setImageCount] = useState(1);
 	const [resourceCount, setResourceCount] = useState(1);
@@ -55,12 +58,16 @@ function MainForm() {
 	return (
 		<div>
 			<h2 className="section-title">Create New Prompt :-</h2>
+<<<<<<< HEAD
 			<form
 				action="#"
 				className="prompt-form"
 				onSubmit={handleSubmit(onSubmit, onError)}
 				noValidate
 			>
+=======
+			<form action="#" className="prompt-form">
+>>>>>>> dc501168953e6064989a27bcd7a11ce39a95c268
 				<div className="form-section">
 					<h1 className="sub-heading">Enter the subject info :-</h1>
 					<div className="subject-input">
@@ -71,6 +78,7 @@ function MainForm() {
 							<input
 								type="text"
 								id="subject-name"
+<<<<<<< HEAD
 								name="subjectname"
 								placeholder="Enter Subject"
 								className="input"
@@ -82,6 +90,12 @@ function MainForm() {
 								})}
 							/>
 							<p className="error">{errors.subjectname?.message}</p>
+=======
+								placeholder="Enter Subject"
+								className="input"
+								required
+							/>
+>>>>>>> dc501168953e6064989a27bcd7a11ce39a95c268
 						</div>
 						<div className="subject-info">
 							<label htmlFor="unit-number" className="label">
@@ -90,6 +104,7 @@ function MainForm() {
 							<input
 								type="number"
 								id="unit-number"
+<<<<<<< HEAD
 								name="unitnumber"
 								placeholder="Enter Unit number"
 								className="input"
@@ -98,6 +113,12 @@ function MainForm() {
 								})}
 							/>
 							<p className="error">{errors.unitnumber?.message}</p>
+=======
+								placeholder="Enter Unit number"
+								className="input"
+								required
+							/>
+>>>>>>> dc501168953e6064989a27bcd7a11ce39a95c268
 						</div>
 						<div className="subject-info">
 							<label htmlFor="topic-name" className="label">
@@ -106,6 +127,7 @@ function MainForm() {
 							<input
 								type="text"
 								id="topic-name"
+<<<<<<< HEAD
 								name="topicName"
 								placeholder="Enter Topic Name"
 								className="input"
@@ -114,6 +136,12 @@ function MainForm() {
                                 })}
 							/>
 							<p className="error">{errors.topicName?.message}</p>
+=======
+								placeholder="Enter Topic Name"
+								className="input"
+								required
+							/>
+>>>>>>> dc501168953e6064989a27bcd7a11ce39a95c268
 						</div>
 					</div>
 				</div>
@@ -133,6 +161,7 @@ function MainForm() {
 									type="url"
 									className="input"
 									id={`prereq${index + 1}`}
+<<<<<<< HEAD
 									name="prereq"
 									placeholder="Enter URL"
 									{...register("prereq", {
@@ -140,6 +169,11 @@ function MainForm() {
                                     })}
 								/>
 								<p className="error">{errors.prereq?.message}</p>
+=======
+									placeholder="Enter URL"
+									required
+								/>
+>>>>>>> dc501168953e6064989a27bcd7a11ce39a95c268
 							</div>
 						))}
 					</div>
@@ -176,6 +210,7 @@ function MainForm() {
 									className="input"
 									type="url"
 									id={`image${index + 1}`}
+<<<<<<< HEAD
 									name="image"
 									placeholder="Enter URL"
 									{...register("images", {
@@ -183,6 +218,11 @@ function MainForm() {
                                     })}
 								/>
 								<p className="error">{errors.image?.message}</p>
+=======
+									placeholder="Enter URL"
+									required
+								/>
+>>>>>>> dc501168953e6064989a27bcd7a11ce39a95c268
 							</div>
 						))}
 					</div>
@@ -214,6 +254,7 @@ function MainForm() {
 							className="input"
 							type="url"
 							id="promptUrl"
+<<<<<<< HEAD
 							name="promptUrl"
 							placeholder="Enter URL"
 							{...register("promptUrl", {
@@ -221,6 +262,11 @@ function MainForm() {
                             })}
 						/>
 						<p className="error">{errors.promptUrl?.message}</p>
+=======
+							placeholder="Enter URL"
+							required
+						/>
+>>>>>>> dc501168953e6064989a27bcd7a11ce39a95c268
 					</div>
 				</div>
 
@@ -241,6 +287,7 @@ function MainForm() {
 									className="input"
 									type="url"
 									id={`resource${index + 1}`}
+<<<<<<< HEAD
 									name="resources"
 									placeholder="Enter URL"
 									{...register("resources", {
@@ -248,6 +295,11 @@ function MainForm() {
                                     })}
 								/>
 								<p className="error">{errors.resources?.message}</p>
+=======
+									placeholder="Enter URL"
+									required
+								/>
+>>>>>>> dc501168953e6064989a27bcd7a11ce39a95c268
 							</div>
 						))}
 					</div>
@@ -268,9 +320,13 @@ function MainForm() {
 						</button>
 					</div>
 				</div>
+<<<<<<< HEAD
 				<button type="submit" className="btn">Submit</button>
 			</form>
 			<DevTool control={control} />
+=======
+			</form>
+>>>>>>> dc501168953e6064989a27bcd7a11ce39a95c268
 		</div>
 	);
 }
