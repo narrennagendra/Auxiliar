@@ -197,6 +197,10 @@ body {
     width: 50%;
     outline: none;
 }
+.error{
+    color: red;
+    text-align: center;
+}
 
 /* ************************** */
 /* generate box styles */
