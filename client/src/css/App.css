@@ -185,10 +185,11 @@
 	padding: initial;
 	margin: initial;
 	box-sizing: content-box;
-	font-size: 1.8rem;
-	padding: 1.6rem;
+	font-size: 1.8rem;     
 	line-height: 1.6;
 	margin-bottom: 1.6rem;
+	width: 700px;
+	padding: 20px;
 }
 
 .gemini-response {
@@ -197,19 +198,11 @@
 	padding: 4.8rem 1rem 3.2rem 6.4rem;
 }
 
-.gemini-response ul,
-.gemini-response ol,
-.gemini-response p {
-	margin-bottom: 1.2rem;
-}
-
-.gemini-response li {
-	margin-left: 0.8rem;
-}
 
 .user-chat {
 	background-color: #001e30;
 	border-radius: 1rem;
+	width: 700px;
 }
 
 .user-input {
