@@ -1,18 +1,21 @@
 import { IconContext } from "react-icons";
 import { FaPlay } from "react-icons/fa";
+import { useDataContext } from "./DataContext";
 import ReactMarkdown from 'react-markdown';
-const markdown= '';
 
 export default function ChatSection() {
+	const promptData = useDataContext();
+	const prompt = promptData ? promptData.prompt : "";
+	const response = promptData ? promptData.response : "";
 	return (
 		<>
 			<section className="section section-chat">
 				<h2 className="section-title">Chat :-</h2>
-				<div className="chat gemini-response wrapper">
-					<ReactMarkdown>{markdown}</ReactMarkdown>
-				</div>
 				<div className="chat user-chat">
-					<p>Can you explain more about data link layer</p>
+					<ReactMarkdown>{prompt}</ReactMarkdown>
+				</div>
+				<div className="chat gemini-response wrapper">
+					<ReactMarkdown>{response}</ReactMarkdown>
 				</div>
 
 				<div className="user-input">
