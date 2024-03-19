@@ -33,9 +33,9 @@ export default function Main() {
         "additionalResources": []
 	});
 
-	useEffect(
-		function () {
-			async () => {
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
 				const response = await fetch(
 					`http://localhost:8001/prompt/${promptId}`,
 					{
@@ -48,10 +48,13 @@ export default function Main() {
 				const data = await response.json();
 				console.log(data);
 				setPromptData(() => data.data.prompt);
-			};
-		},
-		[promptId]
-	);
+			} catch (error) {
+				console.error("Error fetching data:", error);
+			}
+		};
+	
+		fetchData();
+	}, [promptId]);
 
 	
 
