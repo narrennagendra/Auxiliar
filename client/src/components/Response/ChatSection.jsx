@@ -6,33 +6,34 @@ import { useState } from "react";
 
 export default function ChatSection({ response, prompt }) {
 	const [chat, setChat] = useState([
-		{ role: "user", parts: [{ test: prompt }] },
-		{ role: "model", parts: [{ test: response }] },
+		{ role: "user", parts: [{ text: prompt }] },
+		{ role: "model", parts: [{ text: response }] },
 	]);
 	const [userInput, setUserInput] = useState("");
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
-		setChat((prevChat) => [
-			...prevChat,
-			{ role: "user", parts: [{ test: userInput }] },
-		]);
+		const updatedChat = [
+			...chat,
+			{ role: "user", parts: [{ text: userInput }] },
+		];
+		setChat(updatedChat);
 		setUserInput("");
-		await fetchLLMResponse();
+		await fetchLLMResponse(updatedChat);
 	};
 
-	const fetchLLMResponse = async () => {
+	const fetchLLMResponse = async (updatedChat) => {
 		const response = await fetch("http://localhost:8001/chat/generate", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify({ chat }),
+			body: JSON.stringify({ history: updatedChat }),
 		});
 		const data = await response.json();
 		setChat((prevChat) => [
 			...prevChat,
-			{ role: "model", parts: [{ test: data.data }] },
+			{ role: "model", parts: [{ text: data.data }] },
 		]);
 	};
 
@@ -40,19 +41,18 @@ export default function ChatSection({ response, prompt }) {
 		<form>
 			<section className="section section-chat">
 				<h2 className="section-title">Chat :-</h2>
-				{chat.map((message, index) => (
+				{chat.slice(1).map((message, index) => (
 					<div
 						key={index}
 						className={
-							index % 2 === 0
+							index % 2 === 1
 								? "chat user-chat"
 								: "chat gemini-response wrapper"
 						}
 					>
-						{index > 0 && index % 2 === 0 && (
-							<ReactMarkdown key={index}>{message}</ReactMarkdown>
-						)}
-						{index > 0 && index % 2 !== 0 && message}
+						<ReactMarkdown key={index}>
+							{message.parts[0].text}
+						</ReactMarkdown>
 					</div>
 				))}
 

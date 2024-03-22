@@ -1,7 +1,5 @@
-import { useDataContext } from "./DataContext";
-export default function ImagesSection() {
-	const promptData = useDataContext();
-	const imagesUrl = promptData ? promptData.imagesUrl : "";
+/* eslint-disable react/prop-types */
+export default function ImagesSection( {imagesUrl}) {
 	return (
 		<>
 			<section className="section section-images">

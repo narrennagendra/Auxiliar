@@ -1,9 +1,6 @@
 const catchAsync = require("./../utils/catchAsync");
-// const AppError = require("./../utils/appError");
 
-const LLM_url =
-	"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" +
-	process.env.GOOGLE_API_KEY;
+const LLM_url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${process.env.GOOGLE_API_KEY}`;
 
 const generationConfig = {
 	temperature: 0.9,

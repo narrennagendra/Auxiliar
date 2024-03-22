@@ -26,7 +26,6 @@ export default function Main() {
 					}
 				);
 				const data = await response.json();
-				console.log(data);
 				setPromptData(() => data.data.prompt);
 			} catch (error) {
 				console.error("Error fetching data:", error);
@@ -48,18 +47,18 @@ export default function Main() {
 	return (
 		<>
 			<Header />
-			{promptData ? (
+			{Object.keys(promptData).length > 0 ? (
 				<>
 					<div className="not-main">
-						<TopicDirection topicName = {topicName}/>
-						<Prerequisites prerequisites = {prerequisites}/>
+						<TopicDirection topicName = {topicName ? topicName : ""}/>
+						<Prerequisites prerequisites = {prerequisites ? prerequisites : []}/>
 					</div>
 					<div className="main">
-						<ImagesSection imagesUrl = {imagesUrl}/>
-						<ChatSection response = {response} prompt = {prompt}/>
+						<ImagesSection imagesUrl = {imagesUrl? imagesUrl : []}/>
+						<ChatSection response = {response ? response : ""} prompt = {prompt ? prompt : ""}/>
 					</div>
 					<div className="not-main">
-						<AdditionalResources additionalResources = {additionalResources}/>
+						<AdditionalResources additionalResources = {additionalResources ? additionalResources : []}/>
 					</div>
 				</>
 			) : (
