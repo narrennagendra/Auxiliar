@@ -1,25 +1,19 @@
-import { useDataContext } from "./DataContext";
-export default function AdditionalResources() {
-	const promptData = useDataContext();
-	const additionalResources = promptData ? promptData.additionalResources : "";
+/* eslint-disable react/prop-types */
+export default function AdditionalResources( {additionalResources}) {
 	return (
 		<>
 			<section className="section additional-resources">
 				<h2 className="section-title">Additional Resources :-</h2>
 				<ul className="list">
-					{
-						additionalResources.map((additionalResource, index) => (
-							<li key={index}>
-								<a href={additionalResource}>{additionalResource}</a>
-							</li>
-						))
-					}
-					{/* <li className="list-item">
-						<a href="#">Basics of Computer Networks</a>
-					</li>
-					<li className="list-item">
-						<a href="#">Basics of Computer Networks</a>
-					</li> */}
+				{additionalResources.map((additionalResource, index) => (
+						<li className="list-item" key={index}>
+							{additionalResource[0] !== "" ? (
+								<a href={additionalResource[0]}>{additionalResource[1]}</a>
+							) : (
+								<a href={additionalResource[0]}>{additionalResource[0]}</a>
+							)}
+						</li>
+					))}
 				</ul>
 			</section>
 		</>

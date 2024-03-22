@@ -9,11 +9,6 @@ import Container from "./components/Form/Container.jsx";
 
 const router = createBrowserRouter([
 	{
-		//Testing purpose
-		path: "/",
-		element: <Main /> 
-	},
-	{
 		path: "/prompt/:promptId",
 		element: <Main />,
 	},

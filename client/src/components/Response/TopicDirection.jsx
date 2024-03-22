@@ -1,14 +1,9 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
-import { useDataContext } from "./DataContext";
-
-export default function TopicDirection() {
-  const promptData=useDataContext();
-  const topicName = promptData ? promptData.topicName : "";
-  console.log(promptData);
+/* eslint-disable react/prop-types */
+export default function TopicDirection({ topicName }) {
 	return (
 		<>
 			<h2 className="topic-title">
-        		<span>{topicName}</span>
+				<span>{topicName}</span>
 			</h2>
 		</>
 	);
