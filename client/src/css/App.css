@@ -256,6 +256,9 @@ img{
 
 .footer {
 	border: 0.5rem solid #66808f;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
 }
 
 /* ************************** */
