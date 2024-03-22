@@ -1,0 +1,44 @@
+.s-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    max-width: 95rem;
+    margin: 10rem auto auto auto;
+}
+
+.s-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3.2rem;
+    color: #7dedcd;
+}
+
+.chapter-details {
+    padding: 3rem;
+    border-bottom: 0.2rem solid #666666;
+    margin-bottom: 3rem;
+}
+
+.s-container div:last-child {
+    border-bottom: none;
+}
+
+.topic-links {
+    display: inline-block;
+    font-size: 2rem;
+    color: #f76707;
+    margin: 0 1rem 1.5rem 1rem
+}
+
+.topic-links:hover {
+    text-decoration: none;
+}
+
+.s-subject-name {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
+    color: #e6e6e6;
+    align-self: center;
+    text-decoration: underline;
+}

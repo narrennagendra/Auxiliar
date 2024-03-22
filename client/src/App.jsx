@@ -5,6 +5,7 @@ import "./css/App.css";
 import "./css/index.css";
 import Main from "./components/Response/Main.jsx";
 import Container from "./components/Form/Container.jsx";
+import SubjectDetails from "./components/SubjectDetails/SubjectDetails.jsx";
 // import ExampleCase from "./components/Response/ExampleCase.jsx";
 
 const router = createBrowserRouter([
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
 	{
 		path: "/form",
 		element: <Container />,
+	},
+	{
+		path: "/subject/:subjectId",
+		element: <SubjectDetails/>,
 	},
 ]);
 
