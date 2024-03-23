@@ -6,7 +6,7 @@ import "./css/index.css";
 import Main from "./components/Response/Main.jsx";
 import Container from "./components/Form/Container.jsx";
 import SubjectDetails from "./components/SubjectDetails/SubjectDetails.jsx";
-// import ExampleCase from "./components/Response/ExampleCase.jsx";
+import Search from "./components/Search/Search.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -20,6 +20,10 @@ const router = createBrowserRouter([
 	{
 		path: "/subject/:subjectId",
 		element: <SubjectDetails/>,
+	},
+	{
+		path: "/",
+		element: <Search/>,
 	},
 ]);
 

@@ -167,7 +167,7 @@
 	height: 100%;
 }
 
-img{
+img {
 	max-width: 100%;
 }
 
@@ -188,7 +188,7 @@ img{
 	padding: initial;
 	margin: initial;
 	box-sizing: content-box;
-	font-size: 1.8rem;     
+	font-size: 1.8rem;
 	line-height: 1.6;
 	margin-bottom: 1.6rem;
 	width: 700px;
@@ -256,6 +256,9 @@ img{
 
 .footer {
 	border: 0.5rem solid #66808f;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
 }
 
 /* ************************** */

@@ -202,7 +202,8 @@ body {
     width: 50%;
     outline: none;
 }
-.error{
+
+.error {
     color: red;
     text-align: center;
 }
@@ -227,9 +228,14 @@ body {
 
 .instruction-box {
     background-color: #34495e;
-    height: 12rem;
+    width: 500px;
+    height: 20rem;
     border-radius: 1rem;
     margin-bottom: 2rem;
+}
+
+.generate {
+    display: flex;
 }
 
 .generate-btn {

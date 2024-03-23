@@ -12,7 +12,7 @@ export default function Prerequisites({ prerequisites }) {
 				<ul className="list">
 					{prerequisites.map((prerequisite, index) => (
 						<li className="list-item" key={index}>
-							{prerequisite[0] !== "" ? (
+							{prerequisite.length === 2 ? (
 								<a
 									href={prerequisite[1]}
 									target="_blank"
@@ -23,12 +23,12 @@ export default function Prerequisites({ prerequisites }) {
 								</a>
 							) : (
 								<a
-									href={prerequisite[1]}
+									href={prerequisite[0]}
 									target="_blank"
 									rel="noopener noreferrer"
-									title={prerequisite[1]}
+									title={prerequisite[0]}
 								>
-									{truncateUrl(prerequisite[1], 30)}
+									{truncateUrl(prerequisite[0], 30)}
 								</a>
 							)}
 						</li>
